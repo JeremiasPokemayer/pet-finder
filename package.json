@@ -1,0 +1,44 @@
+{
+  "name": "petfinder",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "dev:be": "nodemon ./be-src/index.ts",
+    "dev:fe": "parcel serve ./fe-src/index.html",
+    "start": "node ./be-dist/be-src/index.js",
+    "build:fe": "parcel build ./client/index.html",
+    "build:be": "tsc",
+    "build": "npm run build:be && npm run build:fe"
+  },
+  "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^5.0.3",
+    "@mapbox/search-js-web": "^1.0.0",
+    "@vaadin/router": "^2.0.0",
+    "algoliasearch": "^5.20.4",
+    "cloudinary": "^2.6.0",
+    "cors": "^2.8.5",
+    "dropzone": "^6.0.0-beta.2",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mapbox-gl": "^3.10.0",
+    "nodemon": "^3.1.9",
+    "parcel": "^2.13.3",
+    "pg": "^8.13.3",
+    "pg-hstore": "^2.3.4",
+    "readable-stream": "^4.7.0",
+    "resend": "^4.1.2",
+    "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "buffer": "^5.5.0||^6.0.0",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.1.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.0",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "string_decoder": "^1.3.0",
+    "vm-browserify": "^1.1.2"
+  }
+}
