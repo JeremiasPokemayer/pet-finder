@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "outDir": "be-dist"
   },
-  "includes": ["./be-src/**/*.ts"]
+  "includes": ["./be-src"],
+  "exclude": ["fe-src", "node_modules", "dist"]
 }

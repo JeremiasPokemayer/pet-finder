@@ -7,7 +7,7 @@
     "dev:be": "nodemon ./be-src/index.ts",
     "dev:fe": "parcel serve ./fe-src/index.html",
     "start": "node ./be-dist/be-src/index.js",
-    "build:fe": "parcel build ./client/index.html",
+    "build:fe": "parcel build ./fe-src/index.html",
     "build:be": "tsc",
     "build": "npm run build:be && npm run build:fe"
   },
@@ -28,7 +28,8 @@
     "pg-hstore": "^2.3.4",
     "readable-stream": "^4.7.0",
     "resend": "^4.1.2",
-    "sequelize": "^6.37.5"
+    "sequelize": "^6.37.5",
+    "@types/react": "^19.0.12"
   },
   "devDependencies": {
     "buffer": "^5.5.0||^6.0.0",
