@@ -29,6 +29,8 @@ const port = process.env.PORT || 3002;
 app.use(express.json());
 app.use(cors());
 
+app.use(express.static("dist"));
+
 app.post("/signup", async (req, res) => {
   const user = await createUser(req.body);
   if (user.success) {
