@@ -1,10 +1,14 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "outDir": "be-dist"
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "be-dist",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   },
-  "includes": ["./be-src"],
+  "include": ["be-src"],
   "exclude": ["fe-src", "node_modules", "dist"]
 }

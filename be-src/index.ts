@@ -1,5 +1,3 @@
-import { client } from "../be-src/lib/algolia";
-import { User } from "./models";
 import {
   authUser,
   createUser,
@@ -30,20 +28,6 @@ const app = express();
 const port = process.env.PORT || 3002;
 app.use(express.json());
 app.use(cors());
-
-// index.then((res) => console.log(res)).catch((err) => console.error(err));
-
-// client
-//   .searchSingleIndex({
-//     indexName,
-//     searchParams: {
-//       aroundLatLng: "40.71 , -74.01",
-//       aroundRadius: 1000000,
-//     },
-//   })
-//   .then((res) => {
-//     console.log(res);
-//   });
 
 app.post("/signup", async (req, res) => {
   const user = await createUser(req.body);
